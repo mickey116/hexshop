@@ -40,10 +40,10 @@
         </h6>
         <ul class="nav flex-column mb-2">
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              模擬訂單
-            </a>
+          <router-link to="/custom_order" class="nav-link">
+            <i class="fas fa-cart-arrow-down"></i>
+            模擬訂單
+            </router-link>
           </li>
         </ul>
       </div>

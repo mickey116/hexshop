@@ -220,7 +220,7 @@ export default {
       const vm =this;
       vm.isLoading =true;
       this.axios.get(api).then((response) => {
-      console.log(response.data)
+      //console.log(response.data)
       vm.isLoading = false;
       vm.products = response.data.products;
       vm.pagination = response.data.pagination

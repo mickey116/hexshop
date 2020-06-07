@@ -5,6 +5,8 @@ import Dashboard from '../views/Dashboard/Dashboard'
 import Products from '../views/Products/Products'
 import Order from '../views/Order/Order'
 import Coupon from '../views/Coupon/Coupon'
+import CustomOrder from '../views/CustomOrder/CustomOrder'
+import CustomCheckOut from '../views/CustomCheckOut/CustomCheckOut'
 
 
 Vue.use(VueRouter)
@@ -44,7 +46,23 @@ Vue.use(VueRouter)
       },
     ]
   },
-  
+  {
+    path: '/',
+    name: 'Dashboard',
+    component: Dashboard,
+    children: [
+        {
+          path: 'custom_order',
+          name: 'CustomOrder',
+          component: CustomOrder,
+        },
+        {
+          path: 'custom_checkout/:orderId',
+          name: 'CustomCheckOut',
+          component: CustomCheckOut,
+        },
+      ]
+    },
 ]
 
 const router = new VueRouter({
