@@ -15,6 +15,7 @@ import router from './router'
 import store from './store'
 import './bus'
 import currencyFilters from './filters/currency'
+import dateFilters from './filters/date'
 
 // library.add(faSpinner)
 
@@ -28,6 +29,7 @@ Vue.component('Loading',Loading)
 // Vue.component('font-awesome-icon', FontAwesomeIcon)
 // 全域filter
 Vue.filter('currency', currencyFilters)
+Vue.filter('date', dateFilters)
 
 Vue.use(VueAxios, axios)
 Vue.use(VueI18n);
